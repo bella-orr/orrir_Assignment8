@@ -5,16 +5,27 @@
              Title="Contact Detail">
 
     <ScrollView>
-        <TableView Intent="Data">
-            <TableRoot>
-                <TableSection Title="Contact Information">
-                    <TextCell Text="Name: " Detail="{Binding Person.Name}"/>
-                    <TextCell Text="Email: " Detail="{Binding Person.Email}"/>
-                    <TextCell Text="Phone: " Detail="{Binding Person.Phone}"/>
-                    <TextCell Text="Description: " Detail="{Binding Person.Description}"/>
+        <VerticalStackLayout Padding="20">
+            <TableView Intent="Data">
+                <TableRoot>
+                    <TableSection Title="Contact Information">
+                        <TextCell Text="Name: " Detail="{Binding Person.Name}"/>
+                        <TextCell Text="Email: " Detail="{Binding Person.Email}"/>
+                        <TextCell Text="Phone: " Detail="{Binding Person.Phone}"/>
+                        <TextCell Text="Description: " Detail="{Binding Person.Description}"/>
 
-                </TableSection>
-            </TableRoot>
-        </TableView>
+                    </TableSection>
+                </TableRoot>
+
+
+            </TableView>
+            <Button
+                x:Name="goContactListbutton"
+                Text="Back"
+                HorizontalOptions="FillAndExpand"
+                Clicked="goContactListbutton_Clicked"/>
+
+
+        </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

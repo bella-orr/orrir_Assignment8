@@ -6,4 +6,11 @@ public partial class PersonDetail : ContentPage
 	{
         InitializeComponent();
     }
+
+   
+
+    private async void goContactListbutton_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync();
+    }
 }
