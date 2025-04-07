@@ -43,7 +43,7 @@
                 x:Name="addButton"
                 Text="Add"
                 HorizontalOptions="FillAndExpand"
-                Command="{Binding AddCommand}"
+                Command="{Binding AddCommand}"/>
 
             <Label
                 x:Name="resultLabel"
