@@ -1,6 +1,7 @@
 ﻿using orrir_Assignment8.Models.ViewModels;
 using orrir_Assignment8.Views;
 
+
 namespace orrir_Assignment8
 {
     public partial class MainPage : ContentPage
@@ -14,13 +15,23 @@ namespace orrir_Assignment8
             //Intializes the ViewModel and sets it as the BindingContext for the page
             peopleViewModel = new PersonListViewModel();
             BindingContext = peopleViewModel;
+
+            peopleViewModel.NavigateToContactList = NavigateToContactList;
+        }
+        private async void NavigateToContactList()
+        {
+            var contactListPage = new ContactList();
+            contactListPage.BindingContext = peopleViewModel;
+
+            // Perform navigation to the ContactList page
+            await Navigation.PushAsync(contactListPage);
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private async void Button_Clicked(object sender, EventArgs e)
         {
-            var personList = new ContactList();
-            personList.BindingContext = peopleViewModel;
-            Navigation.PushAsync(personList);
+            var contactListPage = new ContactList();
+            contactListPage.BindingContext = peopleViewModel;
+            await Navigation.PushAsync(contactListPage);
         }
     }
 

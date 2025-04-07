@@ -11,6 +11,7 @@ namespace orrir_Assignment8.Models.ViewModels
 {
     partial class PersonListViewModel: ObservableObject
     {
+        public Action NavigateToContactList { get; set; }
 
         [ObservableProperty]
         private ObservableCollection<Person> people = new();
@@ -24,7 +25,7 @@ namespace orrir_Assignment8.Models.ViewModels
             People.Add(person);
             Person = new Person();
 
-            
+            NavigateToContactList?.Invoke();
         }
 
     }

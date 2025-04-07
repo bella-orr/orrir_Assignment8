@@ -32,7 +32,7 @@
                 Text="{Binding Person.Phone}"/>
 
             <!--Insert description here-->
-            <Entry 
+            <Entry  
                 x:Name="descriptionEntry"
                  Placeholder="Description"
                  HorizontalOptions="FillAndExpand"
