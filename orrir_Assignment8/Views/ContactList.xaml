@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="orrir_Assignment8.Views.ContactList"
+             Title="Contact List">
+
+
+    <ListView x:Name="Lv" ItemsSource="{Binding People}" ItemTapped="Lv_ItemTapped">
+        <ListView.Header>
+            <VerticalStackLayout BackgroundColor="Blue" Padding="5">
+                <Label Text="Contacts" HorizontalOptions="Center" TextColor="White" FontAttributes="Bold"/>
+            </VerticalStackLayout>
+        </ListView.Header>
+        
+        <!--Format for each item in the list-->
+        <ListView.ItemTemplate>
+            <DataTemplate x:DataType="{x:Type models:People}">
+                <TextCell Text="{Binding Name}" Detail="{Binding Description}"/>
+            </DataTemplate>
+            
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
