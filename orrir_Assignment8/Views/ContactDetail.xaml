@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="orrir_Assignment8.Views.ContactDetail"
+             Title="Contact Detail">
+
+    <ScrollView>
+        <TableView Intent="Data">
+            <TableRoot>
+                <TableSection Title="Contact Information">
+                    <TextCell Text="Name: " Detail="{Binding Person.Name}"/>
+                    <TextCell Text="Email: " Detail="{Binding Person.Email}"/>
+                    <TextCell Text="Phone: " Detail="{Binding Person.Phone}"/>
+                    <TextCell Text="Description: " Detail="{Binding Person.Description}"/>
+
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ScrollView>
+</ContentPage>
