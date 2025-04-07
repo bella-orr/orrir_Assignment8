@@ -66,7 +66,18 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Models\ViewModels\" />
+	  <Compile Update="Views\PersonDetail.xaml.cs">
+	    <DependentUpon>PersonDetail.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Views\PersonDetail.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\ContactList.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace orrir_Assignment8.Models
 {
-    class Person
+    public class Person
     {
-        public string Name { get; set; }
+        public string Name { get; set; }    
         public string Email { get; set; }
         public string Phone { get; set; }
         public string Description { get; set; }
